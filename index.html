@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+	<title>Angular Example</title>
+	<link type="text/css" rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+	<link type="text/css" rel="stylesheet" href="./node_modules/bootstrap-vue/dist/bootstrap-vue.min.css" />
+
+	<!-- Load polyfills to support older browsers -->
+	<!-- <script src="//polyfill.io/v3/polyfill.min.js?features=es2015%2CIntersectionObserver" crossorigin="anonymous"></script> -->
+
+	<!-- Load Vue followed by BootstrapVue -->
+	<script src="./node_modules/vue/dist/vue.min.js"></script>
+	<script src="./node_modules/bootstrap-vue/dist/bootstrap-vue.min.js"></script>
+  </head>
+  <body>
+    
+
+	<div tree-wrapper>
+	  <div ng-non-bindable>
+	  <!-- This part is managed by Vuejs-->
+		<gdbtree 
+			:DataTree="DataTree"
+		></gdbtree>
+	  </div>
+	  
+	  <br><br>
+	  <!-- This part is managed by Angular-->
+	  Counter value: {{countValue}} <br>
+	  <button ng-click="decrementCount()" type="button">Decrement by 10</button>
+	  <button ng-click="incrementCount()" type="button">Increment by 10</button>
+	</div>
+
+	<script type="text/javascript" src="./node_modules/angular/angular.js"></script>
+	<script type="module" src="./node_modules/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="./app.js"></script>
+	
+	<script type="module" src="./node_modules/bootstrap-vue/dist/bootstrap-vue.js"></script>
+	<script type="module" src="./node_modules/vue-jstree/dist/vue-jstree.js"></script>
+	<script type="module" src="./node_modules/vue-peerjs/dist/vue-peerjs.min.js"></script>
+	
+	<script type="module" src="./node_modules/peerjs/dist/peerjs.js"></script>
+	<script type="module" src="./node_modules/vue-context-menu/vue-context-menu.js"></script>
+	<!-- <script type="text/javascript" src="./Enums.js"></script> -->
+	
+  </body>
+</html>
